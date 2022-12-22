@@ -1,9 +1,11 @@
-import Triangle from './../src/triangle.js';
+import Calculator from './../src/galactic.js'
 
-describe('Triangle', () => {
+describe('Calculator', () => {
 
-  test('should correctly determine whether three lengths make a scalene triangle', () => {
-    const scalTriangle = new Triangle(4,5,7)
-    expect(scalTriangle.checkType()).toEqual("scalene triangle");
+  test('it should return the age from earth and the life expectancy', () => {
+    const calc = New Calculator(24, 100, earth);
+    expect(calc.age).toEqual(24);
+    expect(calc.lifeSpan).toEqual(100);
+    expect(calc.planet).toEqual("earth");
   });
 });
