@@ -6,10 +6,10 @@ export default class Calculator {
     this.lifeLeft;
   }
 
-  // mercuryCalculation() {
-  //   this.age = Math.round(this.age / .24);
-  //   this.lifeSpan = Math.round(this.lifeSpan / .24);
-  // }
+  mercuryCalculation() {
+    this.age = Math.round(this.age / .24);
+    this.lifeSpan = Math.round(this.lifeSpan / .24);
+}
 
 }
 
