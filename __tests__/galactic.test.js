@@ -35,6 +35,6 @@ describe('Calculator', () => {
     expect(jupiter.age).toEqual(2);
     expect(jupiter.lifeSpan).toEqual(8.4);
     expect(jupiter.planet).toEqual("jupiter");
-  })
+  });
 
 });
