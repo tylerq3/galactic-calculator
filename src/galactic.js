@@ -21,5 +21,11 @@ export default class Calculator {
     this.lifeSpan = Math.round(this.lifeSpan / 1.88);
   }
 
+  jupiter() {
+    this.age = Math.round(this.age / 11.86);
+    this.lifeSpan = Math.round(this.lifeSpan / 11.86);
+  }
+
 }
+
 
