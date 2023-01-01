@@ -13,7 +13,12 @@ export default class Calculator {
 
   venus() {
     this.age = Math.round(this.age / .62);
-    this.lifeSpan = Math.round(this.age / .62);
+    this.lifeSpan = Math.round(this.lifeSpan / .62);
+  }
+
+  mars() {
+    this.age = Math.round(this.age / 1.88);
+    this.lifeSpan = Math.round(this.lifeSpan / 1.88);
   }
 
 }
