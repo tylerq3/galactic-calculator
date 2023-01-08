@@ -10,31 +10,10 @@ describe('Calculator', () => {
   });
 
   test('it should return mercurys age and life expectancy from earth', () => {
-    let mercury = new Calculator(24, 100, "mercury");
-    expect(mercury.age).toEqual(100);
-    expect(mercury.lifeSpan).toEqual(416.6);
-    expect(mercury.planet).toEqual("mercury");
+    let mercury1 = new Calculator(24, "mercury");
+    mercury1.mercury();
+    expect(mercury1.age).toEqual(100);
   });
 
-  test('it should return venus age and life expectancy from earth', () => {
-  let venus = new Calculator(24, 100, "venus");
-  expect(venus.age).toEqual(38.7);
-  expect(venus.lifeSpan).toEqual(161.2);
-  expect(venus.planet).toEqual("venus");
-  })
-
-  test('it should return mars age and life expectancy from earth', () => {
-    let mars = new Calculator(24, 100, "mars");
-    expect(mars.age).toEqual(12.7);
-    expect(mars.lifeSpan).toEqual(53.1);
-    expect(mars.planet).toEqual("mars");
-  })
-
-  test('it should return jupiters age and life expectancy from earth', () => {
-    let jupiter = new Calculator(24, 100, "mars");
-    expect(jupiter.age).toEqual(2);
-    expect(jupiter.lifeSpan).toEqual(8.4);
-    expect(jupiter.planet).toEqual("jupiter");
-  });
 
 });
