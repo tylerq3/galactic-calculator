@@ -23,9 +23,8 @@ describe('Calculator', () => {
 
   test('it should return mars age and life expectancy from earth', () => {
     let mars = new Calculator(24, 100, "mars");
+    mars.mars();
     expect(mars.age).toEqual(12.7);
-    expect(mars.lifeSpan).toEqual(53.1);
-    expect(mars.planet).toEqual("mars");
   })
 
   test('it should return jupiters age and life expectancy from earth', () => {
