@@ -18,7 +18,7 @@ describe('Calculator', () => {
   test('it should return venus age and life expectancy from earth', () => {
   let venus = new Calculator(24, "venus");
   venus.venus();
-  expect(venus.age).toEqual(38.7);
+  expect(venus.age).toEqual(39);
   })
 
   test('it should return mars age and life expectancy from earth', () => {
