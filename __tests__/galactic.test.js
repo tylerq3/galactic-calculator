@@ -32,9 +32,9 @@ describe('Calculator', () => {
     expect(jupiter.age).toEqual(2);
   });
 
-  test('it should return a how many days past since a users birthday for each planet')
+  test('it should return how many days past since a users birthday for each planet', () => {
   let user = new Calculator(56);
-  let yearsPassed = user.yearsPassed(43);
+  user.yearsPassed(pastBirthdayAge);
   expect(yearsPassed).toEqual({
     "Earth": 13,
     "Mercury": 54.16,
@@ -43,7 +43,16 @@ describe('Calculator', () => {
     "Jupiter": 1.09
   });
 
-  
-
-
+  test('it should return how many days until a users birthday for each planet', () => {
+    let user = new Calculator(56);
+    user.yearsLeft(futureBirthdayAge);
+    expect(yearsLeft).toEqual({
+      "Earth": 5,
+      "Mercury": 20.83,
+      "Venus": 20.96,
+      "Mars": 2.65,
+      "Jupiter": 0.42
+    });
+  });
+});
 });

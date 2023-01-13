@@ -1,9 +1,7 @@
 export default class Calculator {
-  constructor(age, lifeSpan, planet) {
+  constructor(age, planet) {
     this.age = age;
     this.planet = planet;
-    this.lifeSpan = lifeSpan;
-    this.lifeLeft;
   }
 
   mercury() {
@@ -27,7 +25,7 @@ export default class Calculator {
   }
 
   yearsPassed(pastBirthdayAge) {
-    let earthYearsPassed = this.earthAge - pastBirthdayAge;
+    let earthYearsPassed = this.age - pastBirthdayAge;
     let mercuryYearsPassed = earthYearsPassed / 0.24;
     let venusYearsPassed = earthYearsPassed / 0.62;
     let marsYearsPassed = earthYearsPassed / 1.88;
@@ -38,6 +36,21 @@ export default class Calculator {
       "Venus": venusYearsPassed,
       "Mars": marsYearsPassed,
       "Jupiter": jupiterYearsPassed
+    }
+  }
+
+  yearsLeft(futureBirthdayAge) {
+    let earthYearsLeft = futureBirthdayAge - this.age;
+    let mercuryYearsLeft = earthYearsLeft / 0.24;
+    let venusYearsLeft = earthYearsLeft / 0.62;
+    let marsYearsLeft = earthYearsLeft / 1.88;
+    let jupiterYearsLeft = earthYearsLeft / 11.86;
+    return {
+      "Earth": earthYearsLeft,
+      "Mercury": mercuryYearsLeft,
+      "Venus": venusYearsLeft,
+      "Mars": marsYearsLeft,
+      "Jupiter": jupiterYearsLeft
     }
   }
 
