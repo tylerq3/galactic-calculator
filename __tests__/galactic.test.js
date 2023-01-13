@@ -33,6 +33,17 @@ describe('Calculator', () => {
   });
 
   test('it should return a how many days past since a users birthday for each planet')
+  let user = new Calculator(56);
+  let yearsPassed = user.yearsPassed(43);
+  expect(yearsPassed).toEqual({
+    "Earth": 13,
+    "Mercury": 54.16,
+    "Venus": 8.06,
+    "Mars": 6.91,
+    "Jupiter": 1.09
+  });
+
+  
 
 
 });

@@ -26,6 +26,21 @@ export default class Calculator {
     this.lifeSpan = Math.round(this.lifeSpan / 11.86);
   }
 
+  yearsPassed(pastBirthdayAge) {
+    let earthYearsPassed = this.earthAge - pastBirthdayAge;
+    let mercuryYearsPassed = earthYearsPassed / 0.24;
+    let venusYearsPassed = earthYearsPassed / 0.62;
+    let marsYearsPassed = earthYearsPassed / 1.88;
+    let jupiterYearsPassed = earthYearsPassed / 11.86;
+    return {
+      "Earth": earthYearsPassed,
+      "Mercury": mercuryYearsPassed,
+      "Venus": venusYearsPassed,
+      "Mars": marsYearsPassed,
+      "Jupiter": jupiterYearsPassed
+    }
+  }
+
 }
 
 
