@@ -9,7 +9,7 @@ export default class Calculator {
   mercury() {
     this.age = Math.round(this.age / .24);
     this.lifeSpan = Math.round(this.lifeSpan / .24);
-}
+  }
 
   venus() {
     this.age = Math.round(this.age / .62);
@@ -28,12 +28,12 @@ export default class Calculator {
 
   yearsPassed(pastBirthday) {
     let earthYearsPassed = this.age - this.pastBirthday;
-    let mercuryYearsPassed = earthYearsPassed / 0.24;
-    let venusYearsPassed = earthYearsPassed / 0.62;
-    let marsYearsPassed = earthYearsPassed / 1.88;
-    let jupiterYearsPassed = earthYearsPassed / 11.86;
+    let mercuryYearsPassed = Math.round(earthYearsPassed / 0.24);
+    let venusYearsPassed = Math.round(earthYearsPassed / 0.62);
+    let marsYearsPassed = Math.round(earthYearsPassed / 1.88);
+    let jupiterYearsPassed = Math.round(earthYearsPassed / 11.86);
     return {
-      "Earth": earthYearsPassed,
+      "Earth": earthYearsPassed, 
       "Mercury": mercuryYearsPassed,
       "Venus": venusYearsPassed,
       "Mars": marsYearsPassed,
@@ -43,10 +43,10 @@ export default class Calculator {
 
   yearsLeft(futureBirthday) {
     let earthYearsLeft = this.futureBirthday - this.age;
-    let mercuryYearsLeft = earthYearsLeft / 0.24;
-    let venusYearsLeft = earthYearsLeft / 0.62;
-    let marsYearsLeft = earthYearsLeft / 1.88;
-    let jupiterYearsLeft = earthYearsLeft / 11.86;
+    let mercuryYearsLeft = Math.round(earthYearsLeft / 0.24);
+    let venusYearsLeft = Math.round(earthYearsLeft / 0.62);
+    let marsYearsLeft = Math.round(earthYearsLeft / 1.88);
+    let jupiterYearsLeft = Math.round(earthYearsLeft / 11.86);
     return {
       "Earth": earthYearsLeft,
       "Mercury": mercuryYearsLeft,
